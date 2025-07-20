@@ -1,0 +1,81 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	padding: 0;
+	background: url('../images/bookstore-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	min-width: 491px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.form-container {
+	max-width: 600px;
+	margin: auto;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+form {
+	padding: 20px;
+	margin-top: -20px;
+}
+
+label {
+	display: block;
+	margin-top: 15px;
+	font-weight: bold;
+	position: relative;
+}
+
+label.required::after {
+	content: " *";
+	color: red;
+	position: absolute;
+}
+
+.form-container form input, select, textarea {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	box-sizing: border-box;
+}
+
+input[type="reset"], .form-container form button {
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	width: 100%;
+	margin-top: 20px;
+	padding: 10px 15px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+input[type="reset"]:hover, .form-container form button:hover {
+	background-color: #388e3c;
+}
+
+.note {
+	font-size: 0.85rem;
+	color: #666;
+	margin-top: 30px;
+	margin-right: 20px;
+}
+
+.form-container input[type="button"] {
+	width: 20%;
+	min-width: 102px;
+	margin-right: 10px;
+	font-size: 0.85rem;
+	color: #666;
+}

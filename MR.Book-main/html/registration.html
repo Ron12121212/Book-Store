@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>טופס הרשמה</title>
+    <link href="../css/registration.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="form-container">
+        <h1>טופס הרשמה</h1>
+        <p class="note">כבר רשום ? <input type="button" value="מעבר להתחברות" onclick="location.href='login.html'"></p>
+        <p class="note">* כל השדות המסומנים כחובה חייבים להתמלא.</p>
+
+        <form action="../php/registration.php" autocomplete="on" method="post">
+        <label class="required">שם פרטי</label>
+        <input type="text" name="fname" required>
+
+        <label class="required">שם משפחה</label>
+        <input type="text" name="lname" required>
+
+        <label class="required">תאריך לידה</label>
+        <input type="date" name="dob" required>
+
+        <label class="required">שם משתמש</label>
+        <input type="text" name="username" required>
+
+        <label class="required">סיסמה</label>
+        <input type="password" name="password" required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+            title="הסיסמה חייבת להכיל לפחות 8 תווים, אות גדולה, אות קטנה, ספרה ותו מיוחד.">
+
+        <label class="required">מגדר</label>
+        <select name="gender" required>
+            <option value="">בחר...</option>
+            <option value="M">זכר</option>
+            <option value="F">נקבה</option>
+        </select>
+
+        <label class="required">אימייל</label>
+        <input type="email" name="email" required>
+
+        <label class="required">מספר טלפון</label>
+        <input type="tel" name="phone" required pattern="0[0-9]{9}" placeholder="05...">
+
+        <label>מדינה</label>
+        <input list="countries" name="country">
+        <datalist id="countries">
+            <option value="ישראל">
+            <option value="ארה״ב">
+            <option value="קנדה">
+            <option value="גרמניה">
+            <option value="צרפת">
+        </datalist>
+
+        <label>האתר שלך<input type="url" name="website" placeholder="https://"></label>
+        <label>המספר האהוב עליך<input type="number" name="favnumber" min="0"></label>
+        <label>הצבע האהוב עליך<input type="color" name="favcolor" value="#ff0000"></label>
+        <label>שעה מועדפת ליצירת קשר<input type="time" name="time"></label>
+        <label>זמן הרשמה<input type="datetime" name="datetime" readonly></label>
+        <label>העלה תמונת פרופיל<input type="file" name="pic"></label>
+
+        <label>ספר לנו על עצמך</label>
+        <textarea name="about" rows="4" maxlength="250" placeholder="ספר לנו על עצמך..."></textarea>
+
+        <label>עד כמה אתה מרוצה מהאתר? (1-10)</label>
+        <input type="range" name="rating" min="1" max="10" value="5">
+
+        <button type="submit">הרשם</button>
+        <input type="reset" value="איפוס">
+        </form>
+    </div>
+
+    <footer></footer>
+
+    <script src="../java_script/registration.js"></script>
+    <script src="../java_script/footer.js"></script>
+    <script src="../php/header.php"></script>
+</body>
+</html>

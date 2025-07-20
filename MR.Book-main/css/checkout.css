@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../images/bookstore-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  direction: rtl;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 32px;
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.cart-main {
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.cart-block {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-summary {
+  font-size: 16px;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.checkout-summary li {
+  margin: 8px 0;
+}
+
+.checkout-summary .total {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.checkout-form {
+  background-color: #2c2c2c;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-form .form-group {
+  margin-bottom: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: white;
+  text-align: right;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.checkout-form button {
+  background-color: #3f51b5;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.checkout-form button:hover {
+  background-color: #303f9f;
+}
+
+@media (max-width: 768px) {
+  .cart-block {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .checkout-form {
+    width: 100%;
+    padding: 20px;
+  }
+}

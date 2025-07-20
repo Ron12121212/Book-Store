@@ -1,0 +1,49 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: url('../images/bookstore-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+}
+
+.results-container {
+  width: 50%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 5px;
+}
+
+.results-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: #e0ffe0;
+}

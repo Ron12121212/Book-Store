@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>הוספת ספר חדש</title>
+	<link href="../css/header.css" rel="stylesheet" />
+	<link href="../css/footer.css" rel="stylesheet" />
+	<link href="../css/form.css" rel="stylesheet" />
+</head>
+<body>
+	<?php session_start(); ?>
+
+    <div id="header-placeholder"></div>
+
+	<div class="form-container">
+		<h1>הוספת ספר למערכת</h1>
+
+		<form action="../php/bookEntry.php" method="post">
+		  <label>כותרת הספר <input type="text" name="title" required></label>
+		  <label>שם המחבר <input type="text" name="auther" required></label>
+		  <label>מחיר (₪) <input type="number" name="price" required min="1" step="1"></label>
+		  <label>תקציר <textarea name="intro" rows="4" maxlength="500" placeholder="כתוב תקציר של הספר..." required></textarea></label>
+		  <label>תמונת כריכה <input type="text" name="picture" required></label>
+		  
+		  <label>שפה</label>
+		  <select name="language" required>
+			<option value="">בחר שפה...</option>
+			<option value="H">עברית</option>
+			<option value="E">אנגלית</option>
+		  </select>
+
+          <fieldset>
+            <legend>קטגוריות (ניתן לבחור יותר מאחת)</legend>
+            <label>מדע בדיוני <input type="checkbox" name="categories[]" value="SF"></label>
+            <label>פנטזיה <input type="checkbox" name="categories[]" value="F"></label>
+            <label>רומנטיקה <input type="checkbox" name="categories[]" value="R"></label>
+            <label>ביוגרפיה <input type="checkbox" name="categories[]" value="B"></label>
+            <label>היסטוריה <input type="checkbox" name="categories[]" value="Hi"></label>
+            <label>אימה <input type="checkbox" name="categories[]" value="Hr"></label>
+            <label>מסתורין <input type="checkbox" name="categories[]" value="M"></label>
+            <label>מתח <input type="checkbox" name="categories[]" value="T"></label>
+            <label>הרפתקאות <input type="checkbox" name="categories[]" value="A"></label>
+            <label>ילדים <input type="checkbox" name="categories[]" value="K"></label>
+            <label>קלאסיקה <input type="checkbox" name="categories[]" value="C"></label>
+          </fieldset>
+
+		  <label>מלאי <input type="number" name="stock" min="0" value="0" required></label>
+		  <label>מומלץ? <input type="checkbox" name="recommend" value="1"></label>
+		  
+		  <button type="submit">הוסף ספר</button>
+		  <input type="reset" value="איפוס">
+		</form>
+	</div>
+	
+	<footer></footer>
+
+    <script src="../java_script/footer.js"></script>
+    <script src="../php/header.php"></script>
+</body>
+</html>

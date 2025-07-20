@@ -1,0 +1,92 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: url('../images/bookstore-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	min-width: 491px;
+}
+
+main {
+	background: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	width: 60%;
+	margin: auto;
+	padding-top: 10px;
+    	padding-bottom: 20px;
+	box-sizing: border-box;
+	min-width: 320px;
+}
+
+.section-title {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.team-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+}
+
+.member-card {
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	width: 300px;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.member-card img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+.member-info h2 {
+	margin: 10px 0 5px;
+}
+
+.member-info p {
+	font-size: 14px;
+	margin: 0 0 10px;
+}
+
+.profile-button {
+	background-color: #4caf50;
+	color: white;
+	text-decoration: none;
+	padding: 8px 16px;
+	border-radius: 5px;
+	display: inline-block;
+	transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+	background-color: #388e3c;
+}
+
+@media (max-width: 768px) {
+	.team-container {
+		flex-direction: column;
+		align-items: center;
+	}
+}

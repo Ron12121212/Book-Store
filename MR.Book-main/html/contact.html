@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>צור קשר</title>
+  <link href="../css/header.css" rel="stylesheet" />
+  <link href="../css/footer.css" rel="stylesheet" />
+  <link href="../css/contact.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <h1 class="section-title">טופס יצירת קשר</h1>
+
+    <div class="form-group">
+      <input type="text" id="subject" placeholder="נושא ההודעה" required />
+    </div>
+
+    <div class="form-group">
+      <textarea id="body" rows="5" placeholder="כתוב כאן את הודעתך..." required></textarea>
+    </div>
+
+    <div class="form-group">
+      <button onclick="sendEmail()">שלח הודעה</button>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="../java_script/contact.js"></script>
+  <script src="../php/header.php"></script>
+  <script src="../java_script/footer.js"></script>
+</body>
+</html>

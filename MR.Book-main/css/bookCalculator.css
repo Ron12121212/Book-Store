@@ -1,0 +1,20 @@
+.book-entry {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.book-entry input {
+	flex: 1;
+}
+
+.remove-btn {
+	max-width: 100px;
+	margin-bottom: 30px;
+}
+
+.form-container {
+	max-width: 800px;
+}	
